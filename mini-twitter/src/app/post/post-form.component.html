@@ -1,0 +1,6 @@
+<form (ngSubmit)='onSubmit(form)' #form='ngForm'>
+    <md-input-container>
+        <textarea mdInput placeholder="Comentario" name="comment" maxlength="240" ngModel></textarea>
+    </md-input-container>
+    <button type='submit' md-raised-button color="primary">Enviar</button>
+</form>

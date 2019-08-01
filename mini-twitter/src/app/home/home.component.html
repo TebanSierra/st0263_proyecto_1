@@ -1,0 +1,20 @@
+<div class="main-container">
+    <app-post-form class="col-sm-8"></app-post-form>
+    <div class="feed" *ngIf="posts.length > 0">
+        <md-card *ngFor="let post of posts">
+            <md-card-header>
+                <div md-card-avatar></div>
+                <md-card-title><h2>{{ post.author }}</h2></md-card-title>
+                <md-card-subtitle>Creado {{ post.createdAt | amLocale: 'es' | amTimeAgo }}</md-card-subtitle>
+            </md-card-header>
+            <md-card-content>
+                <p>
+                    {{ post.comment }}
+                </p>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div class="feed" *ngIf="posts.length === 0">
+        <p>No hay post por ahora.</p>
+    </div>
+</div>
