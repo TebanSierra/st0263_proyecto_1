@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { MomentModule } from 'angular2-moment';
@@ -12,7 +12,10 @@ import { TopicDetailComponent } from './topic/topic-detail.component';
 import { PostFormComponent } from './post/post-form.component';
 import { PostDetailComponent } from './post/post-detail.component';
 import { HomeComponent } from './home/home.component';
+import { SignupScreenComponent } from './auth/signup-screen.component';
 import { SigninScreenComponent } from './auth/signin-screen.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { SigninScreenComponent } from './auth/signin-screen.component';
     PostFormComponent,
     PostDetailComponent,
     HomeComponent,
+    SignupScreenComponent,
     SigninScreenComponent
   ],
   imports: [
@@ -28,7 +32,9 @@ import { SigninScreenComponent } from './auth/signin-screen.component';
     BrowserAnimationsModule,
     MaterialModule,
     MomentModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

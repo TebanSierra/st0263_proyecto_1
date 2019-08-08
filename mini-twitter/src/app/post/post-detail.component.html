@@ -1,13 +1,13 @@
 <app-post-form></app-post-form>
-<md-card *ngFor="let post of posts">
-    <md-card-header>
-        <div md-card-avatar></div>
-        <md-card-title><h2>{{ post.author }}</h2></md-card-title>
-        <md-card-subtitle>Creado {{ post.createdAt | amLocale: 'es' | amTimeAgo }}</md-card-subtitle>
-    </md-card-header>
-    <md-card-content>
+<mat-card *ngFor="let post of posts">
+    <mat-card-header>
+        <div mat-card-avatar></div>
+        <mat-card-title><h2>{{ post.author }}</h2></mat-card-title>
+        <mat-card-subtitle>Creado {{ post.createdAt | amLocale: 'es' | amTimeAgo }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
         <p>
             {{ post.comment }}
         </p>
-    </md-card-content>
-</md-card>
+    </mat-card-content>
+</mat-card>

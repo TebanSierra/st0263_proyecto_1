@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
-import {
-    MdButtonModule,
-    MdCheckboxModule,
-    MdToolbarModule,
-    MdIconModule,
-    MdCardModule,
-    MdInputModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const modules = [
-    MdButtonModule,
-    MdCheckboxModule,
-    MdToolbarModule,
-    MdIconModule,
-    MdCardModule,
-    MdInputModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule
 ];
 
 @NgModule({

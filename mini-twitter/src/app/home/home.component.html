@@ -1,20 +1,36 @@
 <div class="main-container">
-    <app-post-form class="col-sm-8"></app-post-form>
+    <div class="search">
+        <mat-card>
+            <form (ngModel)="onSubmit(form)" #form='ngForm'>
+                <mat-form-field>
+                    <input 
+                        type="text"
+                        matInput
+                        placeholder="Buscar"
+                        name="search">
+                </mat-form-field>
+                <button type='submit' mat-raised-button color="primary">Buscar</button>
+            </form>
+        </mat-card>
+    </div>
+    <div class="new">
+        <app-post-form></app-post-form>
+    </div>
     <div class="feed" *ngIf="posts.length > 0">
-        <md-card *ngFor="let post of posts">
-            <md-card-header>
-                <div md-card-avatar></div>
-                <md-card-title><h2>{{ post.author }}</h2></md-card-title>
-                <md-card-subtitle>Creado {{ post.createdAt | amLocale: 'es' | amTimeAgo }}</md-card-subtitle>
-            </md-card-header>
-            <md-card-content>
+        <mat-card *ngFor="let post of posts">
+            <mat-card-header>
+                <div mat-card-avatar></div>
+                <mat-card-title><h2>{{ post.author }}</h2></mat-card-title>
+                <mat-card-subtitle>Creado {{ post.createdAt | amLocale: 'es' | amTimeAgo }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
                 <p>
                     {{ post.comment }}
                 </p>
-            </md-card-content>
-        </md-card>
+            </mat-card-content>
+        </mat-card>
     </div>
-    <div class="feed" *ngIf="posts.length === 0">
+    <div class="feed empty-post" *ngIf="posts.length === 0">
         <p>No hay post por ahora.</p>
     </div>
 </div>

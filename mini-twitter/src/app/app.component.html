@@ -1,9 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<md-toolbar color="primary">
-  <span>ST0263 Proyecto 1</span>
-  <span class="space"></span>
-  <md-icon>account_circle</md-icon>
-</md-toolbar>
+<mat-toolbar color="primary">
+    <span [routerLink]="['/']">ST0263 Proyecto 1</span>
+    <span class="space"></span>
+    <mat-icon [routerLink]="['/signin']">account_circle</mat-icon>
+  </mat-toolbar>
 
-<!-- <app-home></app-home> -->
-<app-signin-screen></app-signin-screen>
+<router-outlet></router-outlet>

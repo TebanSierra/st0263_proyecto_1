@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Post } from '../../models/post.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-home',
@@ -12,5 +13,9 @@ export class HomeComponent {
 
     constructor() {
         this.posts = new Array<Post>();
+    }
+
+    onSubmit(form: NgForm) {
+        console.log('Buscando! ' + form.value);
     }
 }
