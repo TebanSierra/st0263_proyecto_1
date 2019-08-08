@@ -1,0 +1,5 @@
+<form class="signin-form" (ngSubmit)='onSubmit(f)' #f>
+  <input type="email" name="email" id="email" placeholder="Correo Electronico" [ngModel]='email'>
+  <input type="password" name="password" id="password" placeholder="Contraseña" [ngModel]='password'>
+  <button type="submit" class="primary-button">Iniciar Sesion</button>
+</form>

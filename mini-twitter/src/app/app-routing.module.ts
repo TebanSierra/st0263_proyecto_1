@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { SigninScreenComponent } from './auth/signin-screen.component';
-import { SignupScreenComponent } from './auth/signup-screen.component';
+import { HomeComponent } from './screens/home/home.component';
+import { SignupComponent } from './screens/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -11,16 +10,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'signin',
-    component: SigninScreenComponent
-  },
-  {
     path: 'signup',
-    component: SignupScreenComponent
-  },
-  {
-    path: '',
-    component: HomeComponent
+    component: SignupComponent
   }
 ];
 

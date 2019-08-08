@@ -1,0 +1,7 @@
+<div class="filter-container card">
+  <h2>Busca algo que te guste</h2>
+  <form (ngSubmit)='onSubmit(f)' #f class="filter-form">
+    <input type="text" placeholder="Buscar" [(ngModel)]="filter" class="filter-input">
+    <button class="primary-button">Buscar</button>
+  </form>
+</div>

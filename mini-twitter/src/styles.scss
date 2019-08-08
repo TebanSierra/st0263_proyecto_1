@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import './scss/colors.scss';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.primary-button {
+  border-radius: 10px;
+  background-color: $secondary;
+  height: 80px;
+  width: 150px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

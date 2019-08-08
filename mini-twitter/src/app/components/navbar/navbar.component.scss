@@ -1,0 +1,14 @@
+@import '../../../scss/colors.scss';
+
+.nav-container {
+    background-color: $extra-one;
+    height: 65px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    height: 100%;
+}
