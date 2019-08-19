@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import './scss/colors.scss';
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -17,4 +18,8 @@ body {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.margin {
+  margin: 10px 0;
 }

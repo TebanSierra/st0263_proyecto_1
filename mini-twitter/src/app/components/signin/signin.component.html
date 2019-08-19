@@ -1,9 +1,9 @@
 <h1>Inicia Sesion</h1>
-<div class="mat-dialog-content">
+<div>
   <form class="signin-form" (ngSubmit)='onSubmit(f)' #f>
-    <input type="email" name="email" id="email" placeholder="Correo Electronico" [ngModel]='email'>
-    <input type="password" name="password" id="password" placeholder="Contraseña" [ngModel]='password'>
-    <button mat-button type="submit" class="primary-button">Iniciar Sesion</button>
+    <input class="margin" type="email" name="email" id="email" placeholder="Correo Electronico" [ngModel]='email'>
+    <input class="margin" type="password" name="password" id="password" placeholder="Contraseña" [ngModel]='password'>
+    <button class="margin" type="submit" class="primary-button">Iniciar Sesion</button>
   </form>
-  <p>¿No tienes cuenta? <span [routerLink]="['/signup']">Registrate</span></p>
+  <p>¿No tienes cuenta? <button (click)='goRegister()'>Registrate</button></p>
 </div>
