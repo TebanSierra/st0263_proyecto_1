@@ -1,7 +1,7 @@
-<div class="post-container card">
-  <h2 class="user-name">Usuario</h2>
+<div class="post-container card" *ngIf="post">
+  <h2 class="user-name">{{ post.nickname }}</h2>
   <p class="comment">
-    Aqui va el comentario del usuario.
+    {{ post.comment}}
   </p>
-  <span class="post-date">Fecha del post</span>
+  <span class="post-date">{{ post.createdAt }}</span>
 </div>

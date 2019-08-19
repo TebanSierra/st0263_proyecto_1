@@ -13,6 +13,8 @@ import { PostComponent } from './screens/home/components/feed/components/post/po
 import { SignupComponent } from './screens/signup/signup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SigninComponent } from './components/signin/signin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,12 @@ import { SigninComponent } from './components/signin/signin.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SigninComponent]
 })
 export class AppModule { }
