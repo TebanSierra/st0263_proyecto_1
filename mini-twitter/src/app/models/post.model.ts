@@ -6,8 +6,8 @@ export class Post {
     private topics: Array<string>;
     private createdAt: Date;
 
-    constructor(author: User, comment: string, topics: Array<string>) {
-        this.author = author.getNickname();
+    constructor(author: string, comment: string, topics: Array<string>) {
+        this.author = author;
         this.comment = comment;
         this.topics = topics;
         this.createdAt = new Date();

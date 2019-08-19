@@ -32,7 +32,7 @@ export class NewPostComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     const post = new Post(
-      null,
+      'Esteban',
       form.value.comment,
       this.getTopics(form.value.comment)
     );

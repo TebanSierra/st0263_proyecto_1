@@ -10,13 +10,12 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  newPost(post: Post): Observable<any> {
-    return this.http.post('localhost:8081/post', post);
+  newPost(post: Post): Observable<Post> {
+    return this.http.post<Post>('127.0.0.1:8081/post', post);
   }
 
   getPosts(): Observable<Post[]> {
     console.log('Le estoy pegando al servicio de getPost del Front');
-    const posts = this.http.get('localhost:8081/post');
-    return posts;
+    return this.http.get<Post[]>('127.0.0.1:8081/post');
   }
 }

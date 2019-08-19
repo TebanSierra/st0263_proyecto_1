@@ -1,6 +1,6 @@
 <div class="new-post-container card">
   <h2>Agrega un comentario</h2>
-  <form (ngSubmit)='onSubmit(f)' #f class="post-form">
+  <form (ngSubmit)='onSubmit(f)' #f="ngForm" class="post-form">
     <textarea name="comment" id="comment" placeholder="Comentario" [ngModel]="comment" cols="30" rows="10"></textarea>
     <button class="primary-button">Comentar</button>
   </form>

@@ -9,14 +9,15 @@ import { Post } from 'src/app/models/post.model';
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
-  posts: Observable<Post>;
+  posts: Observable<Post[]>;
 
   constructor(private postService: PostService) { }
 
   ngOnInit() {
-    this.posts = this.postService.getPosts().subscribe(res => {
-      console.log(res);
-    });
+    this.postService.getPosts().subscribe(
+      res => { console.log(res); },
+      error => { console.log(error); }
+    );
   }
 
 }
